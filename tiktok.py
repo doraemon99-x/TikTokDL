@@ -26,7 +26,7 @@ def start_message(m):
 
 @bot.message_handler(content_types=['text'])
 def tiktokdl(m):
-    if m.text.startswith(('https://www.tiktok.com', 'http://www.tiktok.com', 'https://vm.tiktok.com', 'https://vt.tiktok.com')):
+    if m.text.startswith(('https://www.tiktok.com', 'http://www.tiktok.com', 'https://vm.tiktok.com', 'https://vt.tiktok.com/')):
         try:
             send = bot.reply_to(m, 'Processing...')
             url = requests.get(f'https://api.douyin.wtf/api?url={m.text}').json()
